@@ -1,0 +1,10 @@
+extends layout
+
+block content
+  h1= title
+  p Welcome to #{title}
+
+  form(action="/solicitud/procesar" method="POST")
+    input(type="hidden" value="12345")
+    input(Type="submit" name="btg" value="Enviar")
+    

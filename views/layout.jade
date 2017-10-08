@@ -1,0 +1,15 @@
+doctype html
+html
+  head
+    title= title
+    link(rel='stylesheet', href='/stylesheets/style.css')
+    script(src="/socket.io/socket.io.js")
+    script(src="//code.jquery.com/jquery-1.11.3.min.js")
+    script.
+        $(document).on('ready', function(){
+            var web = io("http://localhost:3000");
+            web.emit("hola", "Soy carlos");
+        });
+
+  body
+    block content
